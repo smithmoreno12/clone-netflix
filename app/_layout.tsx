@@ -6,6 +6,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { SplashView } from '@/core';
 
 SplashScreen.preventAutoHideAsync();
 export const unstable_settings = {
@@ -26,6 +27,7 @@ export default function RootLayout() {
     'NetflixSans-Medium': require('../assets/font/NetflixSans-Md.ttf'),
     'NetflixSans-MediumItalic': require('../assets/font/NetflixSans-MdIt.ttf'),
   });
+  const [introFinished, setIntroFinished] = React.useState(false);
 
   React.useEffect(() => {
     //
@@ -33,6 +35,9 @@ export default function RootLayout() {
       SplashScreen.hideAsync();
     }
   }, [fontsLoaded]);
+  if (!introFinished) {
+    return <SplashView onFinish={() => setIntroFinished(true)} />;
+  }
 
   if (!fontsLoaded) return null;
   const loggIn = false;
