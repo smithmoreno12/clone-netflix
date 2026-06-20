@@ -1,19 +1,46 @@
 import '../global.css';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+import React, { ReactNode } from 'react';
 import { Stack } from 'expo-router';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { useFonts } from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
+SplashScreen.preventAutoHideAsync();
 export const unstable_settings = {
   // Ensure that reloading on `/modal` keeps a back button present.
   initialRouteName: '(tabs)',
 };
 
-export default function RootLayout() {
+function Provider({ children }: { children: ReactNode }) {
   return (
-    <SafeAreaProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaProvider>{children}</SafeAreaProvider>
+    </GestureHandlerRootView>
+  );
+}
+export default function RootLayout() {
+  const [fontsLoaded] = useFonts({
+    'NetflixSans-Regular': require('../assets/font/NetflixSans-Rg.ttf'),
+    'NetflixSans-Medium': require('../assets/font/NetflixSans-Md.ttf'),
+    'NetflixSans-MediumItalic': require('../assets/font/NetflixSans-MdIt.ttf'),
+  });
+
+  React.useEffect(() => {
+    //
+    if (fontsLoaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) return null;
+
+  return (
+    <Provider>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       </Stack>
-    </SafeAreaProvider>
+    </Provider>
   );
 }
