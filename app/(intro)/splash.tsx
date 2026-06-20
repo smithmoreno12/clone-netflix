@@ -1,5 +1,5 @@
-import { View } from 'react-native';
+import { SplashView } from '@/core';
 
 export default function Splash() {
-  return <View></View>;
+  return <SplashView />;
 }
