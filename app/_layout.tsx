@@ -35,11 +35,16 @@ export default function RootLayout() {
   }, [fontsLoaded]);
 
   if (!fontsLoaded) return null;
-
+  const loggIn = false;
   return (
     <Provider>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Protected guard={!loggIn}>
+          <Stack.Screen name="(intro)" options={{ headerShown: false }} />
+        </Stack.Protected>
+        <Stack.Protected guard={loggIn}>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        </Stack.Protected>
       </Stack>
     </Provider>
   );
