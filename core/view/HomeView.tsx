@@ -1,10 +1,41 @@
-import { Text, View } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { LinearGradient } from 'expo-linear-gradient';
+import { Header } from '..';
+import { ArrowDown03Icon, CastIcon, Search01Icon } from '../constants/svg';
+
 export const HomeView = () => {
   return (
-    <>
-      <View className="flex-1 items-center justify-center">
-        <Text className="text-center">Home Screen</Text>
-      </View>
-    </>
+    <SafeAreaView className="flex-1 bg-dark">
+      <LinearGradient
+        colors={['#39101E', '#080204']}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 0, y: 1 }}
+        style={style.linear}
+        //style={StyleSheet.absoluteFill}
+      />
+      <ScrollView
+        className="flex-grow"
+        contentContainerClassName="mx-4"
+        showsVerticalScrollIndicator={false}>
+        <Header
+          title="For Saurabh Saini"
+          actions={[
+            { id: 'cast', Icon: CastIcon, onPress: () => {} },
+            { id: 'download', Icon: ArrowDown03Icon, onPress: () => {} },
+            { id: 'search', Icon: Search01Icon, onPress: () => {} },
+          ]}
+        />
+      </ScrollView>
+    </SafeAreaView>
   );
 };
+const style = StyleSheet.create({
+  linear: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    height: 300,
+  },
+});
