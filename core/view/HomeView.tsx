@@ -3,6 +3,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Header } from '..';
 import { ArrowDown03Icon, CastIcon, Search01Icon } from '../constants/svg';
+import { Filter } from '../components/home/Filter';
 
 export const HomeView = () => {
   return (
@@ -26,6 +27,7 @@ export const HomeView = () => {
             { id: 'search', Icon: Search01Icon, onPress: () => {} },
           ]}
         />
+        <Filter />
       </ScrollView>
     </SafeAreaView>
   );
