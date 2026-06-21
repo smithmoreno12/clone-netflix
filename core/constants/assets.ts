@@ -7,6 +7,7 @@ import posterImage6 from '../../assets/img/PosterImage-6.png';
 import posterImage from '../../assets/img/PosterImage.png';
 import logo from '../../assets/img/logo.png';
 import image6 from '../../assets/img/image6.png';
+import FeaturedImage from '../../assets/img/FeaturedImage.png';
 import image9 from '../../assets/img/image6.png';
 import image13 from '../../assets/img/image9.png';
 import image17 from '../../assets/img/image17.png';
@@ -32,4 +33,5 @@ export {
   image29,
   image111,
   image112,
+  FeaturedImage,
 };

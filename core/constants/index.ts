@@ -18,3 +18,5 @@ export const profile: Profile[] = [
     img: image17,
   },
 ];
+
+export const featureInfo: string[] = ['Understated .', 'Dark .', 'Drama .', 'Detectives'];

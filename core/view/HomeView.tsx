@@ -1,7 +1,7 @@
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Header } from '..';
+import { FeaturedContent, Header } from '..';
 import { ArrowDown03Icon, CastIcon, Search01Icon } from '../constants/svg';
 import { Filter } from '../components/home/Filter';
 
@@ -28,6 +28,7 @@ export const HomeView = () => {
           ]}
         />
         <Filter />
+        <FeaturedContent />
       </ScrollView>
     </SafeAreaView>
   );
