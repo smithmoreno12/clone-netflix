@@ -41,7 +41,7 @@ export default function RootLayout() {
   }
 
   if (!fontsLoaded) return null;
-  const loggIn = false;
+  const loggIn = true;
   return (
     <Provider>
       <Stack>

@@ -1,9 +1,9 @@
+import React from 'react';
 import { Image, Pressable, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { EaseView } from 'react-native-ease';
 import { profile } from '../constants';
 import { PlusIcon } from '../constants/svg';
-import React from 'react';
 
 export const WelcomeView = () => {
   const [visible, setVisible] = React.useState(true);
@@ -33,7 +33,9 @@ export const WelcomeView = () => {
                 initialAnimate={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ type: 'timing', duration: 300, delay: 150 + index * 100 }}>
-                <TouchableOpacity className="items-center">
+                <TouchableOpacity
+                  onPress={() => console.log('ir al home')}
+                  className="items-center">
                   <Image
                     source={prof.img}
                     style={{ width: 104, height: 104, borderRadius: 13 }}
