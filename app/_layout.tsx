@@ -1,5 +1,6 @@
 import '../global.css';
 
+import 'react-native-ease/nativewind';
 import React, { ReactNode } from 'react';
 import { Stack } from 'expo-router';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
