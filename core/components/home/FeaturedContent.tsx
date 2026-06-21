@@ -2,11 +2,16 @@ import { featureInfo } from '@/core/constants';
 import { FeaturedImage, image111 } from '@/core/constants/assets';
 import { PlayIcon, PlusIcon } from '@/core/constants/svg';
 import { LinearGradient } from 'expo-linear-gradient';
+import { EaseView } from 'react-native-ease';
 import { Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export const FeaturedContent = () => {
   return (
-    <View className=" mt-5">
+    <EaseView
+      initialAnimate={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ type: 'timing', duration: 300 }}
+      className="mt-5 items-center justify-center">
       <View className="h-[500px] w-[345px] items-center overflow-hidden rounded-xl border border-button">
         <ImageBackground resizeMode="cover" source={image111} style={styles.imgBackground}>
           <View className=" absolute bottom-6 left-0 right-0 items-center">
@@ -18,7 +23,11 @@ export const FeaturedContent = () => {
                 </Text>
               ))}
             </View>
-            <View className="mt-2 flex-row gap-1.5">
+            <EaseView
+              initialAnimate={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ type: 'timing', duration: 300, delay: 200 }}
+              className="mt-2 flex-row gap-1.5">
               <TouchableOpacity className="h-[38px] w-[150px] flex-row items-center justify-center gap-1 rounded-xl bg-white px-1.5 py-3">
                 <PlayIcon width={24} height={24} stroke={'#000'} />
                 <Text className="font-netflix-medium text-15 text-dark">Play</Text>
@@ -27,7 +36,7 @@ export const FeaturedContent = () => {
                 <PlusIcon width={24} height={24} stroke={'#FFFFFF'} />
                 <Text className="font-netflix-medium text-15 text-white">My List</Text>
               </TouchableOpacity>
-            </View>
+            </EaseView>
           </View>
         </ImageBackground>
         <LinearGradient
@@ -39,7 +48,7 @@ export const FeaturedContent = () => {
           pointerEvents="none"
         />
       </View>
-    </View>
+    </EaseView>
   );
 };
 
