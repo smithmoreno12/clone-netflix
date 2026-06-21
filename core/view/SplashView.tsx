@@ -12,7 +12,7 @@ export const SplashView = ({ onFinish }: { onFinish: () => void }) => {
         autoPlay
         loop={false}
         onAnimationFinish={onFinish}
-        style={{ width: 200, height: 200 }}
+        style={{ width: 300, height: 300 }}
       />
     </View>
   );
