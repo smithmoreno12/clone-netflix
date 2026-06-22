@@ -6,7 +6,7 @@ const types = ['TV Shows', 'Movies', 'Categories'];
 export const Filter = () => {
   const [selectedIndex, setSelectedIndex] = React.useState<number>(0);
   return (
-    <View className="mt-8">
+    <View className="mt-5">
       <View className="flex-row items-center">
         <ScrollView
           horizontal
