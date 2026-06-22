@@ -1,5 +1,13 @@
 import { ImageSourcePropType } from 'react-native';
-import { image17, image23 } from './assets';
+import {
+  image17,
+  image23,
+  PlayButton,
+  VideoThumbnail1,
+  VideoThumbnail2,
+  VideoThumbnail3,
+  VideoThumbnail4,
+} from './assets';
 
 type Profile = {
   id: string;
@@ -20,3 +28,36 @@ export const profile: Profile[] = [
 ];
 
 export const featureInfo: string[] = ['Understated .', 'Dark .', 'Drama .', 'Detectives'];
+
+type thumbVideo = {
+  id: string;
+  img: ImageSourcePropType;
+  play: ImageSourcePropType;
+  duracion: string;
+};
+export const thumbVideo: thumbVideo[] = [
+  {
+    id: '1',
+    img: VideoThumbnail4,
+    play: PlayButton,
+    duracion: '2h 56m',
+  },
+  {
+    id: '2',
+    img: VideoThumbnail1,
+    play: PlayButton,
+    duracion: 'P5:E2',
+  },
+  {
+    id: '3',
+    img: VideoThumbnail2,
+    play: PlayButton,
+    duracion: 'Episode 1',
+  },
+  {
+    id: '4',
+    img: VideoThumbnail3,
+    play: PlayButton,
+    duracion: '2h 56m',
+  },
+];

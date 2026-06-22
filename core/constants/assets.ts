@@ -15,6 +15,11 @@ import image23 from '../../assets/img/image23.png';
 import image29 from '../../assets/img/image29.png';
 import image111 from '../../assets/img/image111.png';
 import image112 from '../../assets/img/image112.png';
+import VideoThumbnail1 from '../../assets/img/VideoThumbnail1.png';
+import VideoThumbnail2 from '../../assets/img/VideoThumbnail2.png';
+import VideoThumbnail3 from '../../assets/img/VideoThumbnail3.png';
+import VideoThumbnail4 from '../../assets/img/Videohumbnail4.png';
+import PlayButton from '../../assets/img/PlayButton.png';
 
 export {
   posterImage1,
@@ -34,4 +39,9 @@ export {
   image111,
   image112,
   FeaturedImage,
+  VideoThumbnail1,
+  VideoThumbnail2,
+  VideoThumbnail3,
+  VideoThumbnail4,
+  PlayButton,
 };
