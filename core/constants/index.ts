@@ -34,30 +34,36 @@ type thumbVideo = {
   img: ImageSourcePropType;
   play: ImageSourcePropType;
   duracion: string;
+  progreso: number; // 0 a 100
 };
+
 export const thumbVideo: thumbVideo[] = [
   {
     id: '1',
     img: VideoThumbnail4,
     play: PlayButton,
     duracion: '2h 56m',
+    progreso: 45,
   },
   {
     id: '2',
     img: VideoThumbnail1,
     play: PlayButton,
     duracion: 'P5:E2',
+    progreso: 80,
   },
   {
     id: '3',
     img: VideoThumbnail2,
     play: PlayButton,
     duracion: 'Episode 1',
+    progreso: 10,
   },
   {
     id: '4',
     img: VideoThumbnail3,
     play: PlayButton,
     duracion: '2h 56m',
+    progreso: 0,
   },
 ];
