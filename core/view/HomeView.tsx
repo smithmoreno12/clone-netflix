@@ -1,13 +1,14 @@
-import { ScrollView, StyleSheet } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { ScrollView, StyleSheet, View } from 'react-native';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
 import { FeaturedContent, Header, PosterSlice } from '..';
 import { ArrowDown03Icon, CastIcon, Search01Icon } from '../constants/svg';
 import { Filter } from '../components/home/Filter';
 
 export const HomeView = () => {
+  const { top } = useSafeAreaInsets();
   return (
-    <SafeAreaView edges={['bottom', 'top']} className="flex-1 bg-dark">
+    <View style={{ paddingTop: top }} className="flex-1 bg-dark">
       <LinearGradient
         colors={['#39101E', '#080204']}
         start={{ x: 0, y: 0 }}
@@ -32,7 +33,7 @@ export const HomeView = () => {
         <FeaturedContent />
         <PosterSlice title="Continue Watching for Saubh Saini" />
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 const style = StyleSheet.create({
