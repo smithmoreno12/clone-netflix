@@ -18,8 +18,8 @@ type Props = {
 
 export const PosterSlice = ({ title }: Props) => {
   return (
-    <View className="mt-4">
-      <Text className="mb-2 font-netflix-medium text-16 text-white">{title}</Text>
+    <View className=" mt-4">
+      <Text className="mb-4 font-netflix-medium text-16 text-white">{title}</Text>
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}

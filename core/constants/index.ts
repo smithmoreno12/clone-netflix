@@ -3,6 +3,10 @@ import {
   image17,
   image23,
   PlayButton,
+  PosterImage1,
+  PosterImage2,
+  PosterImage3,
+  PosterImage4,
   VideoThumbnail1,
   VideoThumbnail2,
   VideoThumbnail3,
@@ -65,5 +69,28 @@ export const thumbVideo: thumbVideo[] = [
     play: PlayButton,
     duracion: '2h 56m',
     progreso: 0,
+  },
+];
+
+export type NextWatch = {
+  id: string;
+  img: ImageSourcePropType;
+};
+export const nextWatch: NextWatch[] = [
+  {
+    id: '1',
+    img: PosterImage1,
+  },
+  {
+    id: '2',
+    img: PosterImage2,
+  },
+  {
+    id: '3',
+    img: PosterImage3,
+  },
+  {
+    id: '4',
+    img: PosterImage4,
   },
 ];

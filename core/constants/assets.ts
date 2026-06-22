@@ -20,6 +20,10 @@ import VideoThumbnail2 from '../../assets/img/VideoThumbnail2.png';
 import VideoThumbnail3 from '../../assets/img/VideoThumbnail3.png';
 import VideoThumbnail4 from '../../assets/img/Videohumbnail4.png';
 import PlayButton from '../../assets/img/PlayButton.png';
+import PosterImage1 from '../../assets/img/PosterImage1.png';
+import PosterImage2 from '../../assets/img/PosterImage2.png';
+import PosterImage3 from '../../assets/img/PosterImage3.png';
+import PosterImage4 from '../../assets/img/PosterImage4.png';
 
 export {
   posterImage1,
@@ -44,4 +48,8 @@ export {
   VideoThumbnail3,
   VideoThumbnail4,
   PlayButton,
+  PosterImage1,
+  PosterImage2,
+  PosterImage3,
+  PosterImage4,
 };
