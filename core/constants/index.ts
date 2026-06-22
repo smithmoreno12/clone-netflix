@@ -1,7 +1,11 @@
 import { ImageSourcePropType } from 'react-native';
 import {
+  Container,
   image17,
   image23,
+  InternaImage,
+  InternaImage2,
+  InternaImage3png,
   PlayButton,
   PosterImage1,
   PosterImage2,
@@ -92,5 +96,41 @@ export const nextWatch: NextWatch[] = [
   {
     id: '4',
     img: PosterImage4,
+  },
+];
+export const International: NextWatch[] = [
+  {
+    id: '1',
+    img: Container,
+  },
+  {
+    id: '2',
+    img: InternaImage,
+  },
+  {
+    id: '3',
+    img: InternaImage2,
+  },
+  {
+    id: '4',
+    img: InternaImage3png,
+  },
+];
+export const Dramas: NextWatch[] = [
+  {
+    id: '1',
+    img: PosterImage2,
+  },
+  {
+    id: '2',
+    img: PosterImage1,
+  },
+  {
+    id: '3',
+    img: PosterImage4,
+  },
+  {
+    id: '4',
+    img: PosterImage3,
   },
 ];

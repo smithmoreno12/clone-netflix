@@ -1,14 +1,18 @@
-import { nextWatch } from '@/core/constants';
 import { Image, ScrollView, StyleSheet, TouchableOpacity, View } from 'react-native';
+import type { NextWatch } from '@/core/constants'; // ajusta la ruta si el type vive en otro archivo
 
-export const NextContent = () => {
+type Props = {
+  data: NextWatch[];
+};
+
+export const NextContent = ({ data }: Props) => {
   return (
     <View>
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
         contentContainerClassName="gap-3 px-4">
-        {nextWatch.map((thum) => (
+        {data.map((thum) => (
           <View
             key={thum.id}
             className="h-[218px] w-[110px] justify-center overflow-hidden rounded">

@@ -24,6 +24,10 @@ import PosterImage1 from '../../assets/img/PosterImage1.png';
 import PosterImage2 from '../../assets/img/PosterImage2.png';
 import PosterImage3 from '../../assets/img/PosterImage3.png';
 import PosterImage4 from '../../assets/img/PosterImage4.png';
+import Container from '../../assets/img/Container.png';
+import InternaImage from '../../assets/img/InternaImage.png';
+import InternaImage2 from '../../assets/img/InternaImage2.png';
+import InternaImage3png from '../../assets/img/InternaImage3png.png';
 
 export {
   posterImage1,
@@ -52,4 +56,8 @@ export {
   PosterImage2,
   PosterImage3,
   PosterImage4,
+  Container,
+  InternaImage,
+  InternaImage2,
+  InternaImage3png,
 };

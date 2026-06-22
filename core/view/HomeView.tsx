@@ -5,8 +5,9 @@ import { FeaturedContent, Header, PosterSlice } from '..';
 import { ArrowDown03Icon, CastIcon, Search01Icon } from '../constants/svg';
 import { Filter } from '../components/home/Filter';
 import { Poster } from '../components/ui/Poster';
-import { nextWatch } from '../constants';
+
 import { NextContent } from '../components/home/NextContent';
+import { Dramas, International, nextWatch } from '../constants';
 
 export const HomeView = () => {
   const { top } = useSafeAreaInsets();
@@ -36,7 +37,11 @@ export const HomeView = () => {
         <FeaturedContent />
         <PosterSlice title="Continue Watching for Saubh Saini" />
         <Poster title="Your Next Watch" />
-        <NextContent />
+        <NextContent data={nextWatch} />
+        <Poster title="International TV Shows" />
+        <NextContent data={International} />
+        <Poster title="Crime Dramas" />
+        <NextContent data={Dramas} />
       </ScrollView>
     </View>
   );
