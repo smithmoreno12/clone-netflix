@@ -7,7 +7,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { SplashView } from '@/core';
+import { SplashView, useStore } from '@/core';
 
 SplashScreen.preventAutoHideAsync();
 export const unstable_settings = {
@@ -29,6 +29,7 @@ export default function RootLayout() {
     'NetflixSans-MediumItalic': require('../assets/font/NetflixSans-MdIt.ttf'),
   });
   const [introFinished, setIntroFinished] = React.useState(false);
+  const seletedUser = useStore((state) => state.seletedUser);
 
   React.useEffect(() => {
     //
@@ -41,14 +42,14 @@ export default function RootLayout() {
   }
 
   if (!fontsLoaded) return null;
-  const loggIn = true;
+
   return (
     <Provider>
       <Stack>
-        <Stack.Protected guard={!loggIn}>
+        <Stack.Protected guard={!seletedUser}>
           <Stack.Screen name="(intro)" options={{ headerShown: false }} />
         </Stack.Protected>
-        <Stack.Protected guard={loggIn}>
+        <Stack.Protected guard={seletedUser}>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="details/[id]" options={{ headerShown: false }} />
         </Stack.Protected>
