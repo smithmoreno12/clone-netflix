@@ -19,6 +19,12 @@ export const DetailsView = () => {
   const data = videoDetail.find((a) => a.id === id);
   if (!data) return null;
 
+  const toggleActive = (itemId: string) => {
+    setActiveIds((prev) =>
+      prev.includes(itemId) ? prev.filter((activeId) => activeId !== itemId) : [...prev, itemId]
+    );
+  };
+
   return (
     <View style={{ paddingTop: top }} className="flex-1 bg-dark">
       <LinearGradient
@@ -56,17 +62,20 @@ export const DetailsView = () => {
           </Text>
 
           <Text className="mt-2 font-netflix-regular text-11 text-gray-400">
-            Cast: <Text className="text-gray-400">{data.cast}</Text>
+            Cast: <Text className="text-white">{data.cast}</Text>
           </Text>
           <Text className="mb-1 font-netflix-regular text-11 text-gray-400">
-            Creator: <Text className="text-gray-400">{data.creator}</Text>
+            Creator: <Text className="text-white">{data.creator}</Text>
           </Text>
         </View>
-        <View className="mx-2 mb-3 mt-5 h-[33px] w-[300px] flex-row items-center gap-16">
+        <View className="mx-2 mb-3 mt-5 h-[33px] w-full flex-row items-center gap-16 ">
           {buttonAction.map((item) => {
             const isActive = activeIds.includes(item.id);
             return (
-              <TouchableOpacity key={item.id} className="items-center justify-center">
+              <TouchableOpacity
+                key={item.id}
+                className="items-center justify-center"
+                onPress={() => toggleActive(item.id)}>
                 <Image
                   source={item.icon}
                   style={{ width: 24, height: 24, tintColor: '#FFFFFF' }}
