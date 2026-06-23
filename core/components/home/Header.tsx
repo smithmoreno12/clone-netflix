@@ -17,7 +17,6 @@ export function Header({ title, actions = [] }: Props) {
   return (
     <View className="flex h-[60px] w-full flex-row items-center justify-between">
       <Image resizeMode="contain" source={NetflixSymbol} style={{ width: 50, height: 50 }} />
-      {/* <Text className="font-netflix-medium text-22 text-white">{title}</Text> */}
       {actions.length > 0 && (
         <View className="flex-row items-center gap-4">
           {actions.map(({ id, Icon, onPress }) => (
