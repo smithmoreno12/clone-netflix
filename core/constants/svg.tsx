@@ -1,4 +1,5 @@
 import { ArrowDown03Icon } from '@/assets/svg/ArrowDown03Icon';
+import { Cancel01Icon } from '@/assets/svg/Cancel01Icon';
 import { CastIcon } from '@/assets/svg/CastIcons';
 import { ComputerVideoIcon } from '@/assets/svg/ComputerVideoIcon';
 import { Home01Icon } from '@/assets/svg/Home01Icon';
@@ -20,4 +21,5 @@ export {
   ComputerVideoIcon,
   Home01Icon,
   Navigation03Icon,
+  Cancel01Icon,
 };

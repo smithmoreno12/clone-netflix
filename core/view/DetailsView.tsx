@@ -32,7 +32,7 @@ export const DetailsView = () => {
         contentInsetAdjustmentBehavior="automatic"
         contentContainerClassName="mx-4"
         showsVerticalScrollIndicator={false}>
-        <VideoPlay data={data} />
+        <VideoPlay />
         <View className="mb-1 mt-5 flex flex-row items-center justify-between">
           <Text className=" font-netflix-medium text-16 text-white">{data.title}</Text>
           <View className=" flex-row items-center justify-end gap-1 ">
