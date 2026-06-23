@@ -12,7 +12,7 @@ export default function TabLayout() {
           borderTopWidth: 0,
           elevation: 0,
           shadowOpacity: 0,
-          paddingHorizontal: 10,
+          paddingHorizontal: 20,
         },
         tabBarActiveTintColor: '#FFFFFF',
         tabBarInactiveTintColor: '#8C8C8C',
@@ -23,9 +23,7 @@ export default function TabLayout() {
         options={{
           headerShown: false,
           title: 'Home',
-          tabBarIcon: ({ color, size = 30 }) => (
-            <Home01Icon width={size} height={size} stroke={color} />
-          ),
+          tabBarIcon: ({ color, size }) => <Home01Icon width={size} height={size} stroke={color} />,
         }}
       />
       <Tabs.Screen
@@ -33,7 +31,7 @@ export default function TabLayout() {
         options={{
           headerShown: false,
           title: 'New & Hot',
-          tabBarIcon: ({ color, size = 30 }) => (
+          tabBarIcon: ({ color, size }) => (
             <ComputerVideoIcon width={size} height={size} stroke={color} />
           ),
         }}
@@ -43,8 +41,8 @@ export default function TabLayout() {
         options={{
           headerShown: false,
           title: 'My netflix',
-          tabBarIcon: ({ color, size }) => (
-            <Image source={image23} style={{ height: 30, width: 30 }} />
+          tabBarIcon: ({ size }) => (
+            <Image source={image23} style={{ height: size, width: size }} />
           ),
         }}
       />

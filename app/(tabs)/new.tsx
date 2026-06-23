@@ -1,3 +1,5 @@
+import { NewView } from '@/core';
+
 export default function NewHot() {
-  return <></>;
+  return <NewView />;
 }

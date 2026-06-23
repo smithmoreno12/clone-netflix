@@ -28,6 +28,8 @@ import Container from '../../assets/img/Container.png';
 import InternaImage from '../../assets/img/InternaImage.png';
 import InternaImage2 from '../../assets/img/InternaImage2.png';
 import InternaImage3png from '../../assets/img/InternaImage3png.png';
+import NetflixSymbol from '../../assets/img/NetflixSymbol.png';
+import videoDetails from '../../assets/img/videoDetail.png';
 
 export {
   posterImage1,
@@ -60,4 +62,6 @@ export {
   InternaImage,
   InternaImage2,
   InternaImage3png,
+  NetflixSymbol,
+  videoDetails,
 };

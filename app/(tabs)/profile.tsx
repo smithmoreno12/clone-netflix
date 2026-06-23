@@ -1,3 +1,5 @@
+import { ProfileView } from '@/core';
+
 export default function Profile() {
-  return <></>;
+  return <ProfileView />;
 }

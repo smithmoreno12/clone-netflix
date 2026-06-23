@@ -1,6 +1,7 @@
 import { ImageSourcePropType } from 'react-native';
 import {
   Container,
+  image111,
   image17,
   image23,
   InternaImage,
@@ -132,5 +133,31 @@ export const Dramas: NextWatch[] = [
   {
     id: '4',
     img: PosterImage3,
+  },
+];
+
+export type VideoDetail = {
+  id: string;
+  title: string;
+  year: string;
+  duration: string;
+  size: string;
+  descri: string;
+  img: ImageSourcePropType;
+  cast: string;
+  creator: string;
+};
+export const videoDetail: VideoDetail[] = [
+  {
+    id: '1',
+    title: 'Anweshippin Kandethum',
+    year: '2024',
+    duration: '2h 22m',
+    size: 'HD',
+    descri:
+      'Wronfully suspended while pursuing the culprit in a missing persons case, a cop seeks redemtion - and justice - when he gets a new assignment',
+    img: image111,
+    cast: 'Tovino Thomas, Siddique, Vineeth Thattil David... more',
+    creator: 'Darwin Kuriakose',
   },
 ];
