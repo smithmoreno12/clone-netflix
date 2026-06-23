@@ -1,5 +1,6 @@
 import { ImageSourcePropType } from 'react-native';
 import {
+  AddIcon,
   Container,
   image111,
   image17,
@@ -7,16 +8,20 @@ import {
   InternaImage,
   InternaImage2,
   InternaImage3png,
+  LikeIcon,
   PlayButton,
   PosterImage1,
   PosterImage2,
   PosterImage3,
   PosterImage4,
+  share,
   VideoThumbnail1,
   VideoThumbnail2,
   VideoThumbnail3,
   VideoThumbnail4,
 } from './assets';
+import { Navigation03Icon, PlusIcon } from './svg';
+import { SvgProps } from 'react-native-svg';
 
 type Profile = {
   id: string;
@@ -159,5 +164,28 @@ export const videoDetail: VideoDetail[] = [
     img: image111,
     cast: 'Tovino Thomas, Siddique, Vineeth Thattil David... more',
     creator: 'Darwin Kuriakose',
+  },
+];
+
+type ButtonAction = {
+  id: string;
+  icon: ImageSourcePropType;
+  label: string;
+};
+export const buttonAction: ButtonAction[] = [
+  {
+    id: '1',
+    icon: AddIcon,
+    label: 'My List',
+  },
+  {
+    id: '2',
+    icon: LikeIcon,
+    label: 'Rate',
+  },
+  {
+    id: '3',
+    icon: share,
+    label: 'Share',
   },
 ];

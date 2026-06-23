@@ -30,6 +30,9 @@ import InternaImage2 from '../../assets/img/InternaImage2.png';
 import InternaImage3png from '../../assets/img/InternaImage3png.png';
 import NetflixSymbol from '../../assets/img/NetflixSymbol.png';
 import videoDetails from '../../assets/img/videoDetail.png';
+import LikeIcon from '../../assets/icons/LikeIcon.png';
+import share from '../../assets/icons/share.png';
+import AddIcon from '../../assets/icons/AddIcon.png';
 
 export {
   posterImage1,
@@ -64,4 +67,7 @@ export {
   InternaImage3png,
   NetflixSymbol,
   videoDetails,
+  LikeIcon,
+  share,
+  AddIcon,
 };

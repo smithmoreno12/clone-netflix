@@ -1,18 +1,24 @@
 import { LinearGradient } from 'expo-linear-gradient';
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useLocalSearchParams } from 'expo-router';
-import { videoDetail } from '../constants';
+import { buttonAction, nextWatch, videoDetail } from '../constants';
 import { VideoPlay } from '../components/home/ViedeoPlay';
 import { NetflixSymbol } from '../constants/assets';
 import { Button } from '../components/ui/Button';
 import { ArrowDown03Icon, PlayIcon } from '../constants/svg';
+import { useState } from 'react';
+import { Poster } from '../components/ui/Poster';
+import { NextContent } from '../components/home/NextContent';
 
 export const DetailsView = () => {
   const { top } = useSafeAreaInsets();
+  const [activeIds, setActiveIds] = useState<string[]>([]);
+
   const { id } = useLocalSearchParams<{ id: string }>();
   const data = videoDetail.find((a) => a.id === id);
   if (!data) return null;
+
   return (
     <View style={{ paddingTop: top }} className="flex-1 bg-dark">
       <LinearGradient
@@ -56,6 +62,27 @@ export const DetailsView = () => {
             Creator: <Text className="text-gray-400">{data.creator}</Text>
           </Text>
         </View>
+        <View className="mx-2 mb-3 mt-5 h-[33px] w-[300px] flex-row items-center gap-16">
+          {buttonAction.map((item) => {
+            const isActive = activeIds.includes(item.id);
+            return (
+              <TouchableOpacity key={item.id} className="items-center justify-center">
+                <Image
+                  source={item.icon}
+                  style={{ width: 24, height: 24, tintColor: '#FFFFFF' }}
+                  resizeMode="contain"
+                />
+                <Text className="font-netflix-regular text-9 text-white">{item.label}</Text>
+                <View
+                  className="mt-1 h-[2px] w-[50px]"
+                  style={{ backgroundColor: isActive ? '#E50914' : 'transparent' }}
+                />
+              </TouchableOpacity>
+            );
+          })}
+        </View>
+        <Poster title="More Like This" />
+        <NextContent data={nextWatch} />
       </ScrollView>
     </View>
   );
