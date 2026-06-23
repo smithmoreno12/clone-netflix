@@ -28,7 +28,7 @@ Expo 54 · React Native 0.81 · Expo Router · NativeWind · TypeScript · Zusta
 ## 🚀 Instalación
 
 ```bash
-git clone <url-del-repo>
+git clone <https://github.com/smithmoreno12/clone-netflix>
 cd clone-netflix
 npm install
 ```
