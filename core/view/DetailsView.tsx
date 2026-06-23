@@ -44,6 +44,18 @@ export const DetailsView = () => {
           <Button variant="primary" icon={PlayIcon} label="Play" onPress={() => {}} />
           <Button variant="secondary" icon={ArrowDown03Icon} label="Dowload" onPress={() => {}} />
         </View>
+        <View className="mt-3.5">
+          <Text numberOfLines={4} className="font-netflix-regular text-13 text-white">
+            {data.descri}
+          </Text>
+
+          <Text className="mt-2 font-netflix-regular text-11 text-gray-400">
+            Cast: <Text className="text-gray-400">{data.cast}</Text>
+          </Text>
+          <Text className="mb-1 font-netflix-regular text-11 text-gray-400">
+            Creator: <Text className="text-gray-400">{data.creator}</Text>
+          </Text>
+        </View>
       </ScrollView>
     </View>
   );
